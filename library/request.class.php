@@ -25,7 +25,7 @@ class Request {
         
         $context = stream_context_create($opt);        
         $result = file_get_contents($url, false, $context);
-
+print_r($result);
         return (is_string($result)) ? $result : FALSE;
     }
     
