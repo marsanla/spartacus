@@ -130,7 +130,7 @@
                 })
                 .done(function(data) {
                     data = JSON.parse(data);
-console.log(data);
+
                     $btn.button('complete');
                     setTimeout(function () {
                         $btn.button('reset');
@@ -148,7 +148,6 @@ console.log(data);
                     });
                 })
                 .fail(function(data) {
-                    console.log(data);
                     data = JSON.parse(data.responseText);
                     self.find('#errors').text(data.message);
                     
