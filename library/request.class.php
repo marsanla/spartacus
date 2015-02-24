@@ -76,6 +76,8 @@ class Request {
                 break;
         }
         
+        header('access-control-allow-origin: *');
+        header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
         http_response_code($json_obj->jsonCode);
         
         return $res;
