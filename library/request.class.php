@@ -25,7 +25,7 @@ class Request {
         
         $context = stream_context_create($opt);        
         $result = file_get_contents($url, false, $context);
-print_r($result);
+
         return (is_string($result)) ? $result : FALSE;
     }
     
@@ -77,7 +77,7 @@ print_r($result);
         }
         
         header('access-control-allow-origin: *');
-        header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+        
         http_response_code($json_obj->jsonCode);
         
         return $res;
