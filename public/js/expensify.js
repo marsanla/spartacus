@@ -39,7 +39,6 @@
                 
                 $.ajax({
                     type: 'POST',
-                    crossDomain: true,
                     url: '/auth/login',
                     data: {
                         email: self.find('#email').val(),
@@ -79,7 +78,6 @@
             $.ajax({
                 url: '/transactions/viewall',
                 type: 'POST',
-                crossDomain: true,
                 data: {
                     authToken: authToken
                 },
@@ -120,7 +118,6 @@
                 
                 $.ajax({
                     type: 'POST',
-                    crossDomain: true,
                     url: '/transactions/add',
                     data: {
                         authToken: authToken,
