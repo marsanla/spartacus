@@ -2,7 +2,7 @@
 
 /** Configuration Variables **/
 
-define ('DEVELOPMENT_ENVIRONMENT', false);
+define ('DEVELOPMENT_ENVIRONMENT', true);
 
 define('DB_NAME', 'databaseName');
 define('DB_USER', 'username');

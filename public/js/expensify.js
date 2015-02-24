@@ -39,7 +39,7 @@
                 
                 $.ajax({
                     type: 'POST',
-                    url: '/auth/login',
+                    url: 'http://52.10.255.47/auth/login',
                     data: {
                         email: self.find('#email').val(),
                         password: self.find('#password').val()
@@ -47,6 +47,7 @@
                     cache: false
                 })
                 .done(function(data) {
+                    console.log(data);
                     data = JSON.parse(data);
                     
                     $.cookie('authToken', data.value.authToken, { expires: 1 });
@@ -60,6 +61,7 @@
                     init();
                 })
                 .fail(function(data) {
+                    console.log(data);
                     if(data.status === 404) {
                         self.find('#errors').text('Email or password not found. Try again.');
                     } else {
