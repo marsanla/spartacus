@@ -77,7 +77,6 @@ class Request {
         }
         
         header('access-control-allow-origin: *');
-        
         http_response_code($json_obj->jsonCode);
         
         return $res;

@@ -39,7 +39,7 @@
                 
                 $.ajax({
                     type: 'POST',
-                    url: 'http://52.10.255.47/auth/login',
+                    url: '/auth/login',
                     data: {
                         email: self.find('#email').val(),
                         password: self.find('#password').val()
