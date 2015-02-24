@@ -47,8 +47,7 @@
                     cache: false
                 })
                 .done(function(data) {
-                    console.log(data);
-                    data = JSON.parse(data);
+                    data = JSON.parse(data); 
                     
                     $.cookie('authToken', data.value.authToken, { expires: 1 });
                     $.cookie('profile', {
@@ -61,7 +60,6 @@
                     init();
                 })
                 .fail(function(data) {
-                    console.log(data);
                     if(data.status === 404) {
                         self.find('#errors').text('Email or password not found. Try again.');
                     } else {
@@ -132,7 +130,7 @@
                 })
                 .done(function(data) {
                     data = JSON.parse(data);
-
+console.log(data);
                     $btn.button('complete');
                     setTimeout(function () {
                         $btn.button('reset');
@@ -150,6 +148,7 @@
                     });
                 })
                 .fail(function(data) {
+                    console.log(data);
                     data = JSON.parse(data.responseText);
                     self.find('#errors').text(data.message);
                     
