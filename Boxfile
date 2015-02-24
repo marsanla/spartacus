@@ -1,12 +1,10 @@
 web1:
-  php_max_execution_time: 30
-  php_post_max_size: "8M"
   name: spartacus
   shared_writable_dirs:
     - /tmp/cache
     - /tmp/logs
     
-  document_root: /
+  document_root: public/
   php_version: 5.4.14
   php_extensions:
     - curl
