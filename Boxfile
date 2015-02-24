@@ -1,0 +1,18 @@
+web1:
+  php_max_execution_time: 30
+  php_post_max_size: "8M"
+  name: spartacus
+  shared_writable_dirs:
+    - /tmp/cache
+    - /tmp/logs
+    
+  document_root: /
+  php_version: 5.4.14
+  php_extensions:
+    - curl
+    - mcrypt
+    - gd
+
+  after_deploy:
+    - "rm -f tmp/cache/*"
+    - "rm -f tmp/logs/*"
